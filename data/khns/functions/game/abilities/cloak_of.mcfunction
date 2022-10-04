@@ -1,0 +1,5 @@
+# /give @p carrot_on_a_stick{Tag: ["cloak_of"], Unbreakable: 1, Damage: 0, CustomModelData: 0, EntityTag: {Invisible: 1b}, display: {Name: '[{"text":"Cloak","italic":false}]'}, Enchantments: [{}], HideFlags: 127}
+execute as @a[scores={used_ability=1..}] at @s if data entity @s {SelectedItem: {id: "minecraft:carrot_on_a_stick", tag: {Tag: ["cloak_of"]}}} run tellraw @a [{"text":"","extra":[{"selector":"@s"},{"text":"has used Cloak"}]}]
+execute as @a[scores={used_ability=1..}] at @s if data entity @s {SelectedItem: {id: "minecraft:carrot_on_a_stick", tag: {Tag: ["cloak_of"]}}} run effect give @s minecraft:invisibility 5 0 true
+execute as @a[scores={used_ability=1..}] at @s if data entity @s {SelectedItem: {id: "minecraft:carrot_on_a_stick", tag: {Tag: ["cloak_of"]}}} run particle cloud ~ ~1 ~ 1 0.5 1 0.1 50 force @a
+execute as @a[scores={used_ability=1..}] at @s if data entity @s {SelectedItem: {id: "minecraft:carrot_on_a_stick", tag: {Tag: ["cloak_of"]}}} run playsound minecraft:block.redstone_torch.burnout master @a ~ ~ ~ 0.8 0.9 0.2
