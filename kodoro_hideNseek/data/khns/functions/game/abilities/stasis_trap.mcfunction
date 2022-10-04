@@ -1,0 +1,3 @@
+# give @p glow_squid_spawn_egg{EntityTag:{id:armor_stand,Invisible:1b,NoBasePlate:1b,Small:1b,CustomName:'[{"text":"stasis_trap"}]',Invulnerable:1b,NoGravity:1b,PersistenceRequired:1b},display:{Name:'[{"text":"Stasis Trap","italic":false}]',Lore:['[{"text":"Place on a surface","italic":false}]','[{"text":"to activate a","italic":false}]','[{"text":"slowing trap.","italic":false}]']}}
+execute as @e[type=minecraft:armor_stand,name="stasis_trap"] at @s run summon area_effect_cloud ~ ~0.1 ~ {Tags: ["stasis_trap"], Particle: "glow", Radius: 3f, Duration: 100, Age: 0, WaitTime: 20}
+kill @e[type=minecraft:armor_stand,name="stasis_trap"]
