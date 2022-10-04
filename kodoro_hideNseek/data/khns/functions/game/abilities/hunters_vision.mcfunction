@@ -1,5 +1,0 @@
-# /give @p carrot_on_a_stick{Tag:["hunters_vision"],Unbreakable:1,Damage:0,CustomModelData:0,EntityTag:{Invisible:1b},display:{Name:'[{"text":"Hunter\'s Vision","italic":false}]'},Enchantments:[{}],HideFlags:127}
-execute as @a[scores={used_ability=1..}] at @s if data entity @s {SelectedItem: {id: "minecraft:carrot_on_a_stick", tag: {Tag: ["hunters_vision"]}}} run effect give @a[team=Hider] minecraft:glowing 5 0 true
-execute as @a[scores={used_ability=1..}] at @s if data entity @s {SelectedItem: {id: "minecraft:carrot_on_a_stick", tag: {Tag: ["hunters_vision"]}}} run tellraw @a [{"text":"","extra":[{"selector":"@s"},{"text":" has used Hunter's Vision"}]}]
-execute as @a[scores={used_ability=1..}] at @s if data entity @s {SelectedItem: {id: "minecraft:carrot_on_a_stick", tag: {Tag: ["hunters_vision"]}}} run playsound minecraft:entity.wither.ambient master @a ~ ~ ~ 5 0.8 0.2
-execute as @a[scores={used_ability=1..}] at @s if data entity @s {SelectedItem: {id: "minecraft:carrot_on_a_stick", tag: {Tag: ["hunters_vision"]}}} run effect give @s minecraft:blindness 1 0 true

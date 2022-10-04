@@ -1,2 +1,0 @@
-tellraw @s [{"text": "[KHNS] To deploy KHNS core place and power "},{"text": "[Core]", "color": "green", "clickEvent": {"action":"run_command","value":"/give @s minecraft:command_block{display:{Name:'[{\"text\":\"Core\",\"italic\":false}]'},Enchantments:[{}],HideFlags:1,BlockEntityTag:{Command:\"function khns:core/place_core\"}}"}}, {"text": " command block."}]
-tellraw @s [{"text": "[KHNS] To start the game place "}, {"text": "redstone block"}, {"text": "on lime green concrete"}]
